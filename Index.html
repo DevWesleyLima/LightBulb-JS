@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Bulb On/Off</title>
+    <script type=""text/JavaScript>
+        function light(show)
+        {
+            var pic;
+
+            if (show == 0) 
+            {
+                picSrc = "media/LightbulbOFF.png";
+                picHeight = "15%";
+                picWidth = "10%";
+                picMargin = "0% 0% 0% 5.2%";                                 
+            }
+            else if (show == 1) 
+            {
+                picSrc = "media/LightbulbON.png";    
+                picHeight = "15%";
+                picWidth = "10%";
+                picMargin = "0% 0% 0% 5.2%";                               
+            }
+            else if (show == 2) 
+            {
+                picSrc = "media/LightbulbONBLue.png";  
+                picHeight = "15%";
+                picWidth = "10%";
+                picMargin = "0% 0% 0% 5.2%";                
+            }
+            else if (show == 3) 
+            {
+                picSrc = "media/LightbulbONGreen.png"; 
+                picHeight = "15%";
+                picWidth = "10%";
+                picMargin = "0% 0% 0% 5.2%";                 
+            }
+            else if (show == 4) 
+            {
+                picSrc = "media/LightbulbONPurple.png";
+                picHeight = "15%";
+                picWidth = "10%";
+                picMargin = "0% 0% 0% 5.2%";                   
+            }
+            else if (show == 5) 
+            {
+                picSrc = "media/LightbulbONRed.png";
+                picHeight = "15%";
+                picWidth = "10%";
+                picMargin = "0% 0% 0% 5.2%";               
+            }
+            else if (show == 6) 
+            {
+                picSrc = "media/Lightbulb.gif";
+                picHeight = "30%";
+                picWidth = "30%";
+                //UP RIGHT DOWN LEFT
+                picMargin = "-6% 0% -7% -4.7%";                                               
+            }
+            else
+            {
+                picSrc = "media/LightbulbBlank.png";
+                picHeight = "15%";
+                picWidth = "10%";
+                picMargin = "0% 0% 0% 5.2%";               
+            }
+            document.getElementById('lightbulb').src = picSrc;
+            document.getElementById('lightbulb').style.height = picHeight;
+            document.getElementById('lightbulb').style.width = picWidth;
+            document.getElementById("lightbulb").style.margin = picMargin;                        
+        }
+    </script>
+</head>
+<body>
+    <h1>Light Bulb On/Off</h1>
+    <p>JavaScript is going to change the values of the source atribute of an image.</p>
+    <img id="lightbulb" src="media/LightbulbBlank.png" height = "15%" width = "10%" style = "margin: 0% 0% 0% 5.2%;">
+    <p>
+        <button type="button" style="width: 10%; color: gold; font-weight: bold; background-color: darkgrey;" onclick="light(1)">ON</button>
+        <button type="button" style="width: 10%; color: black; font-weight: bold; background-color: darkgrey;" onclick="light(0)">OFF</button>        
+    </p>
+    <p>
+        <button type="button" style="width: 10%; color: lightblue; font-weight: bold; background-color: darkgrey;" onclick="light(2)">Blue</button>
+        <button type="button" style="width: 10%; color: greenyellow; font-weight: bold; background-color: darkgrey;" onclick="light(3)">Green</button>        
+    </p>
+    <p>
+        <button type="button" style="width: 10%; color: rgb(126, 73, 126); font-weight: bold; background-color: darkgrey;" onclick="light(4)">Purple</button>
+        <button type="button" style="width: 10%; color: red; font-weight: bold; background-color: darkgrey;" onclick="light(5)">Red</button>        
+    </p>
+    <p> 
+        <button type="button" style="width: 20.4%; color: white; font-weight: bold; background-color: darkgrey;" onclick="light(6)">Flashing Light</button>
+    </p>
+</body>
+</html>
